@@ -1,0 +1,28 @@
+{
+  "name": "blaze-cloudflare",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node ./prepare_wrangler.js && tsup",
+    "deploy": "node ./prepare_wrangler.js && tsup && wrangler deploy"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "^0.1.0",
+    "@cloudflare/workers-types": "^4.20240512.0",
+    "fs": "0.0.1-security",
+    "minify": "^11.4.0",
+    "tsup": "^8.2.4",
+    "typescript": "^5.6.2",
+    "wrangler": "^3.0.0"
+  },
+  "dependencies": {
+    "@blaze-cardano/core": "^0.4.5",
+    "@blaze-cardano/query": "^0.2.16",
+    "@blaze-cardano/sdk": "^0.1.32",
+    "@blaze-cardano/tx": "^0.5.15",
+    "buffer": "^6.0.3"
+  }
+}
